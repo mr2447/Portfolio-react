@@ -25,7 +25,7 @@ function App() {
      <main>
        <About></About>
        <ContactForm></ContactForm>
-       <Portfolio></Portfolio>
+       <Portfolio currentSection></Portfolio>
      </main>
     </div>
   );

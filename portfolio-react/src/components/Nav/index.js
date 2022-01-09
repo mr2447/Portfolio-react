@@ -1,14 +1,16 @@
 import React, { useEffect }from 'react';
 
 function Nav(props) {
-    useEffect(()=> {
-        document.title = currentSection.name
-    }, [currentSection])
     const {
         sections = [],
         setCurrentSection,
         currentSection,
     } = props;
+    
+    useEffect(()=> {
+        document.title = currentSection.name
+    }, [currentSection])
+
     function categorySelected(name) {
         console.log(`${name} clicked`)
     }

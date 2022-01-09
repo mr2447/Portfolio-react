@@ -1,23 +1,16 @@
 import React from 'react';
-import photo from '../../assets/images/simple-doc-port.jpeg'
+import PhotoList from '../PhotoList';
 
 
-function Portfolio(props) {
-    const currentWork = {
-        name: "Simple Doc",
-        description: "Manages small hospital Patience, Nurses and Doctors."
-    };
+
+function Portfolio({currentSection}) {
+    const { name, description } = currentSection
     return(
         <section>
-            <h1>{currentWork.name}</h1>
-            <p>{currentWork.description}</p>
-            <div className="flex-row">
-                <img
-                    src={photo}
-                    alt="Simple Doc"
-                    className="img-thumbnail mx-1"
-                />
-            </div>
+            <h1>{name}</h1>
+            <p>{description}</p>
+            <PhotoList>
+            </PhotoList>
         </section>
     );
 }
