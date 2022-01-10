@@ -6,7 +6,13 @@ function Nav(props) {
         setCurrentSection,
         currentSection,
         contactSelected,
-        setContactSelected
+        setContactSelected,
+        aboutSelected,
+        setAboutSelected,
+        portfolioSelected,
+        setPortfolioSelected,
+        resumeSelected,
+        setResumeSelected
     } = props;
     
     useEffect(()=> {
@@ -26,28 +32,45 @@ function Nav(props) {
             <nav>
                 <ul className="flex-row">
                     <li className="mx-2">
-                        <a href="#about" onClick={() => setContactSelected(false)}>
+                        <a href="#about" onClick={() => 
+                           [setContactSelected(false),
+                            setAboutSelected(true),
+                            setPortfolioSelected(false),
+                            setResumeSelected(false)
+                        ]
+                        }>
                             About
                         </a>
                     </li>
-                    <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-                        <span onClick={()=> setContactSelected(true)}>Contact</span>
+                    <li className={`mx-2 ${contactSelected && !aboutSelected && !resumeSelected && !portfolioSelected && 'navActive'}`}>
+                        <span onClick={()=> 
+                            [setContactSelected(true),
+                            setAboutSelected(false),
+                            setPortfolioSelected(false)
+                            ]
+                        }>Contact</span>
                     </li>
-                    {sections.map((section) => (
-                        <li className={`mx-1 ${
-                            currentSection.name === section.name && !contactSelected && 'navActive'
-                        }`} key={section.name}>
-                            {/* onClick expects a callback function */}
-                            <span onClick={()=> {
-                                setCurrentSection(section)
-                                categorySelected(section.name)
-                                setContactSelected(false)
-                            }}
-                            >
-                            {section.name}
-                            </span>
-                        </li>
-                    ))}
+                    <li className={`mx-1 ${!contactSelected && !aboutSelected && !resumeSelected && portfolioSelected && 'navActive'}`}>
+                        <span onClick={()=> 
+                            [
+                                setContactSelected(false),
+                                setAboutSelected(false),
+                                setPortfolioSelected(true),
+                                setResumeSelected(false)
+                            ]
+                        }>Portfolio</span>
+                    </li>
+                    <li className={`mx-1 ${!contactSelected && !aboutSelected && !portfolioSelected && resumeSelected && 'navActive'}`}>
+                        <span onClick={()=> 
+                            [
+                                setContactSelected(false),
+                                setAboutSelected(false),
+                                setPortfolioSelected(false),
+                                setResumeSelected(true)
+                            ]
+                        }>Resume</span>
+                    </li>
+                    
                 </ul>
             </nav>
         </header>

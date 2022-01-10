@@ -11,7 +11,6 @@ function Portfolio({currentSection}) {
             <p>{description}</p> */}
             <PhotoList>
             </PhotoList>
-            <p>Hello</p>
         </section>
     );
 }

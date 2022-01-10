@@ -34,15 +34,16 @@ function PhotoList() {
         <div className="flex-row">
             {photos.map((photo)=> { 
                 return (
-                    <>
+                    <div key={photo.filename}>
+                
                     <img
-                    key={photo.filename}
                     src={`/images/${photo.filename}.jpg`}
                     alt={photo.title}
                     className="img-thumbnail mx-1"
                     />
                     <span>{photo.description}</span>
-                    </>
+                
+                    </div>
                 );
             })} 
         </div>
