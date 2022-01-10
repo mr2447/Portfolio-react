@@ -9,3 +9,8 @@
 .navActive {
   color: var(--secondary);
 }
+
+footer {
+  color: red;
+  margin-top: 0;
+}

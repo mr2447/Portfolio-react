@@ -16,17 +16,30 @@ function App() {
 ]);
 
   const [currentSection, setCurrentSection] = useState(sections[0]);
+  const [contactSelected, setContactSelected] = useState(false)
   return (
     <div>
       <Nav  
         sections={sections}
         setCurrentSection={setCurrentSection}
-        currentSection={currentSection}></Nav>
+        currentSection={currentSection}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
+      ></Nav>
      <main>
-       <About></About>
-       <ContactForm></ContactForm>
-       <Portfolio currentSection></Portfolio>
+       {!contactSelected ? (
+         <>
+            <Portfolio currentSection></Portfolio>
+            <About></About>
+         </>
+       ) : (
+            <ContactForm></ContactForm>
+      )}
+ 
      </main>
+     <footer>
+     <h2>Made by Marvin Ren with React.</h2>
+     </footer>
     </div>
   );
 }

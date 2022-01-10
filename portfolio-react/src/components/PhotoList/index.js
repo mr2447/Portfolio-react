@@ -30,18 +30,20 @@ function PhotoList() {
             description: 'a front-end html for a trainer matching business'
         }
     ]
-    console.log("photoname: ", photos[0].title)
     return (
         <div className="flex-row">
             {photos.map((photo)=> { 
-            <img
-            src={`../../assets/images/${photo.filename}.jpg`}
-            alt={photo.title}
-            className="img-thumbnail mx-1"
-            key={photo.title}
-            >
-            <span>{photo.description}</span>
-            </img>
+                return (
+                    <>
+                    <img
+                    key={photo.filename}
+                    src={`/images/${photo.filename}.jpg`}
+                    alt={photo.title}
+                    className="img-thumbnail mx-1"
+                    />
+                    <span>{photo.description}</span>
+                    </>
+                );
             })} 
         </div>
     )
