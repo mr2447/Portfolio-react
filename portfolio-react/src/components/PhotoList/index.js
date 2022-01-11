@@ -7,27 +7,37 @@ function PhotoList() {
         {
             title: 'Simple Doc',
             filename: 'simple-doc',
-            description: 'Manages small hospital for doctors, nurses, and patients'
+            description: 'Manages a small hospital.',
+            github: 'https://github.com/mr2447/simple-doc',
+            deploy: 'https://enigmatic-sea-73658.herokuapp.com/'
         },
         {
             title: 'Eat in Peace',
             filename: 'eat-in-peace',
-            description: 'Helps users to track their diet based on thier BMI'
+            description: "Track user's diet based on BMI.",
+            github: 'https://github.com/mr2447/dreamteam',
+            deploy: 'https://mr2447.github.io/dreamteam/'
         },
         {
             title: 'Weather Dashboard',
             filename: 'weather-dashboard',
-            description: 'Checks weather in cities all over the world using third party API'
+            description: 'Checks weather with third party API.',
+            github: 'https://github.com/mr2447/weather-daashboard',
+            deploy: 'https://github.com/mr2447/weather-daashboard'
         },
         {
             title: 'Team Generator',
             filename: 'team-generator',
-            description: 'Generates a profile of all team members'
+            description: 'Generates team profile.',
+            github: 'https://github.com/mr2447/team-profile-generator',
+            deploy: 'https://github.com/mr2447/team-profile-generator'
         },
         {
             title: 'Run Buddy',
             filename:'run-buddy',
-            description: 'a front-end html for a trainer matching business'
+            description: 'A front-end html for small business.',
+            github: 'https://mr2447.github.io/run-buddy/',
+            deploy: 'https://mr2447.github.io/run-buddy/'
         }
     ]
     return (
@@ -35,14 +45,17 @@ function PhotoList() {
             {photos.map((photo)=> { 
                 return (
                     <div key={photo.filename}>
-                
+                    <a href={photo.deploy} target="_blank">
                     <img
                     src={`/images/${photo.filename}.jpg`}
                     alt={photo.title}
                     className="img-thumbnail mx-1"
                     />
-                    <span>{photo.description}</span>
-                
+                    </a>
+                    <br/>
+                    <span>{photo.description} <a href={photo.github} target="_blank"> Github Repo</a></span>
+                    <br/>
+                    <br/>
                     </div>
                 );
             })} 
