@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'EB Garamond SC', 'EB Garamond', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -29,6 +29,8 @@ main {
   --palette-three: #fefae0;
   --pallette-four: #dda15e;
   --pallette-five: #bc6c25;
+  --small-font-color: #4A4A4A;
+
 }
 
 * {
@@ -48,17 +50,91 @@ body {
   line-height: 1.5;
   font-size: 18px;
   letter-spacing: 0.1em;
-  background: var(--clay);
-  color: var(--dark);
-  font-family: 'Poiret One';
+  color: var( --small-font-color);
+  font-family: 'EB Garamond SC';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'EB Garamond SC', 'EB Garamond';
+  font-weight: 500;
+  margin: 5px 0;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+
+.navActive {
+  color: var(--pallette-five);
+}
+
+header {
+  background: white;
+}
+
+/* header and nav section  */
+.porfolio-title {
+  color: #bc6c25;
+};
+
+nav {
+  background-color: white;
+}
+nav a {
+  color: var(--nav-font-color) !important;
+  text-decoration: none;
+}
+
+
+nav span {
+  color: var(--nav-font-color)
 }
 
 li {
   list-style: none;
   cursor: pointer;
 }
+
 a{
   text-decoration: none;
+}
+/* About section  */
+section h2 {
+  color: black
+}
+section p {
+  color: var(--small-font-color);
 }
 
 
@@ -70,12 +146,30 @@ a{
 }
 
 
-.navActive {
-  color: var(--secondary);
+
+
+/* Contact */
+button {
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 1px;
+  background-color: var(--secondary);
 }
 
 footer {
-  color:--dark;
+  color:white;
+  background: #212121;
+}
+
+footer a {
+  color:white;
+  font-size: 14px;
+  cursor: pointer;
 }
 .flex-wrapper {
   display: flex;
