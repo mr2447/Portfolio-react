@@ -5,12 +5,13 @@
   
   This App is open source software licensed as MIT.
   ## Table of Contents
-  * [Description](https://github.com/mr2447/potential-enigma/tree/main/dist#description)
-  * [Installation](https://github.com/mr2447/potential-enigma/tree/main/dist#installation)
-  * [Usage](https://github.com/mr2447/potential-enigma/tree/main/dist#usage)
-  * [Tests](https://github.com/mr2447/potential-enigma/tree/main/dist#tests)
-  * [Credits](https://github.com/mr2447/potential-enigma/tree/main/dist#Credits)
-  * [Questions](https://github.com/mr2447/potential-enigma/tree/main/dist#questions)
+  * [Description](#description)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Credits](#Credits)
+  * [Tests](#tests)
+  * [Questions](#questions)
+   * [Deployment](#deployment)
   ## Description: 
   My deployed React portfolio of work samples for potential employers to assess my candidacy for an open position.
   ## Installation: 
@@ -21,7 +22,7 @@
   The page will reload when you make changes.\
   You may also see any lint errors in the console.
   ## Usage
-  * ![terminal in VS](./src/assets/images/portfolio-react-screenshot.jpg)
+  ![terminal in VS](./src/assets/images/portfolio-react-screenshot.jpg)
   ## Credits 
   Marvin https://github.com/mr2447/portfolio-react
   ## Tests
@@ -31,7 +32,5 @@
   Reach me on gitHub or by email. 
   GitHub: mr2447
   Email: marvin.ren@yahoo.com
-
   ## Deployment
-
-    This section has moved here: [https://mr2447.github.io/portfolio-react/](https://mr2447.github.io/portfolio-react/)
+  This section has moved here: [https://mr2447.github.io/portfolio-react/](https://mr2447.github.io/portfolio-react/)
