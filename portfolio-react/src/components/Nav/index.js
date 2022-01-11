@@ -46,7 +46,8 @@ function Nav(props) {
                         <span onClick={()=> 
                             [setContactSelected(true),
                             setAboutSelected(false),
-                            setPortfolioSelected(false)
+                            setPortfolioSelected(false),
+                            setResumeSelected(false)
                             ]
                         }>Contact</span>
                     </li>

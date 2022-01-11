@@ -52,6 +52,7 @@ function PhotoList() {
                     className="img-thumbnail mx-1"
                     />
                     </a>
+                    <h3>{photo.title}</h3>
                     <br/>
                     <span>{photo.description} <a href={photo.github} target="_blank"> Github Repo</a></span>
                     <br/>
